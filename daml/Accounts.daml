@@ -1,0 +1,14 @@
+module Accounts where 
+data Accounts=Accounts{
+    ban: Text,
+    state: Text,
+    segment: Text
+}deriving(Eq,Show)
+
+template AccountContract 
+ with 
+  name: Party
+  accounts:Accounts 
+ where 
+  signatory name
+
